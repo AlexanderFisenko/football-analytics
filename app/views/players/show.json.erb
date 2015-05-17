@@ -1,0 +1,15 @@
+{
+  "id": <%= @player.id %>, "name": <%= Russian.translit(@player.name) %>, "age": <%= @player.age %>, "height": <%= @player.height_in_feet %>, "weight": <%= @player.weight_in_pounds %>,
+  "events": {
+    "goal": [
+      { "id": <%= @last_goal_event.id %>, "minute": <%= @last_goal_event.minute %> }
+    ],
+    "free_kick": [
+      { "id": <%= @last_free_kick_event.id %>, "minute": <%= @last_free_kick_event.minute %> }
+    ],
+    "foul": [
+      { "id": <%= @last_foul_event.id %>, "minute": <%= @last_foul_event.minute %> }
+    ]
+  },
+  "avg_pos_x": <%= @player.avg_pos_x %>, "avg_pos_y": <%= @player.avg_pos_y %>
+}
